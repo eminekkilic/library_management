@@ -7,13 +7,13 @@ Created on Sat Feb 17 20:04:10 2024
 
 
 class Library:
-    def _init_(self):
+    def __init__(self):
         
         self.file = open("books.txt", "a+")  # "a+" kipi dosyayı okuma ve yazma modunda açar
         self.file.seek(0)  # Dosyanın başına git
         self.kitaplar = self.file.readlines()  # Dosyanın içeriğini oku ve kitaplar listesine aktar
 
-    def _del_(self):
+    def __del__(self):
         # Dosyayı kapat
         self.file.close()
 
